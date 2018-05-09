@@ -31,4 +31,4 @@ sleep 5s
 docker rmi -f laravel:temp1
 rm  Dockerfile
 docker rmi -f registry.cn-hangzhou.aliyuncs.com/xavier/nginx-php-fpm
-
+rm setup.sh
