@@ -5,3 +5,4 @@ sed -i '5c root /var/www/public;' /etc/nginx/sites-enabled/default.conf
 rm -rf /var/www 
 cd /var && ~/.composer/vendor/bin/laravel new www
 mkdir -p /var/www/storage/logs/  &&  touch /var/www/storage/logs/laravel.log &&  chmod -R 777 /var/www/storage
+rm larago
