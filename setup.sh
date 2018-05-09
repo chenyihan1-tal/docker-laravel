@@ -29,5 +29,5 @@ docker run -d --name laravel_temp1 laravel:temp1
 docker exec -it laravel_temp1 /bin/bash /home/larago
 docker commit -a 'Xavier' -p -m 'laravel'  laravel_temp1 laravel
 docker rm -f laravel_temp laravel_temp1 && docker rmi -f laravel:temp1 laravel:temp registry.cn-hangzhou.aliyuncs.com/xavier/nginx-php-fpm
-rm setup.sh  larago Dockerfile 
+cd ../ && rm -rf xavier_temp
 
