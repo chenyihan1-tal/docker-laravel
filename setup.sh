@@ -17,12 +17,11 @@ EOF
 
 docker run -d --name laravel_temp registry.cn-hangzhou.aliyuncs.com/xavier/nginx-php-fpm
 docker cp larago laravel_temp:/home/
-
 docker commit -a 'Xavier' -p -m 'laravel' laravel_temp laravel:temp0
 docker rm -f laravel_temp
 rm larago
 
-docker build --rm -t  laravel:temp1 .
+docker build -t  laravel:temp1 .
 docker rmi laravel:temp0
 docker run -d -p80:80 --name laravel_temp1 laravel:temp1
 docker exec -it laravel_temp1 /bin/bash /home/larago
