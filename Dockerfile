@@ -3,4 +3,4 @@ MAINTAINER Xavier <FineJadeXavier@gmail.com>
 RUN cd /home && wget https://raw.githubusercontent.com/FineJadeXavier/laravel/master/larago && \
     sed -i '/^$/d' larago && chmod +x larago
 EXPOSE 80 443 9000 22
-CMD ["sh", "/home/larago"]
+CMD ["bash", "/home/larago"]
