@@ -3,6 +3,6 @@ echo "alias laravel='~/.composer/vendor/bin/laravel'" >> ~/.bashrc && echo "alia
 composer global require "laravel/installer"
 sed -i '5c root /var/www/public;' /etc/nginx/sites-enabled/default.conf
 rm -rf /var/www 
-cd /var && ~/.composer/vendor/bin/laravel new www
+cd /var && git clone https://github.com/laravel/laravel.git www
 mkdir -p /var/www/storage/logs/  &&  touch /var/www/storage/logs/laravel.log &&  chmod -R 777 /var/www/storage
 rm larago
