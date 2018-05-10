@@ -9,8 +9,11 @@
     docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
 
 或者自己构建这个镜像
+
 如果你的机器是中国大陆的linux
+
 请复制下面命令
+
 在任何地方运行都可以
 
     wget https://raw.githubusercontent.com/FineJadeXavier/laravel/master/setup.sh && chmod +x setup.sh && ./setup.sh
