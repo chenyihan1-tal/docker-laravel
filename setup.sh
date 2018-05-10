@@ -1,6 +1,7 @@
 #!/bin/bash
 mkdir xavier_temp && cd xavier_temp
 tee larago <<-'EOF'
+composer config -g repo.packagist composer https://packagist.phpcomposer.com
 echo "alias laravel='~/.composer/vendor/bin/laravel'" >> ~/.bashrc && echo "alias rm='rm -rf'" >> ~/.bashrc && source ~/.bashrc
 composer global require "laravel/installer"
 sed -i '5c root /var/www/public;' /etc/nginx/sites-enabled/default.conf
