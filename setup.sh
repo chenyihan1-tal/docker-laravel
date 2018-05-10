@@ -5,6 +5,7 @@ composer config -g repo.packagist composer https://packagist.phpcomposer.com
 echo "alias laravel='~/.composer/vendor/bin/laravel'" >> ~/.bashrc && echo "alias rm='rm -rf'" >> ~/.bashrc && source ~/.bashrc
 composer global require "laravel/installer"
 sed -i '5c root /var/www/public;' /etc/nginx/sites-enabled/default.conf
+sed -i '25c try_files $uri $uri/ /index.php?$query_string;' /etc/nginx/sites-enabled/default.conf
 rm -rf /var/www 
 cd /var && ~/.composer/vendor/bin/laravel new www
 mkdir -p /var/www/storage/logs/  &&  touch /var/www/storage/logs/laravel.log &&  chmod -R 777 /var/www/storage/
