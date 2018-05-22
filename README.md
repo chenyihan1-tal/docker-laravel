@@ -12,7 +12,7 @@
 
 /var/www/
 
-目前是php 7.2.4 和 laravel 5.6
+目前是 php7.2.4 ， laravel5.6 和 nginx
 
 如果有兴趣 ，请帮助我优化代码
 
@@ -26,6 +26,6 @@ Where is the project after the installation？
 
 /var/www/
 
-it is php 7.2.4 和 laravel 5.6 for now
+it is php7.2.4 , laravel5.6  and nginx for now
 
 If you are interested, help me optimize the code
