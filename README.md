@@ -22,4 +22,4 @@
 
 
 ## 或者你可以这样使用
-    docker build https://github.com/FineJadeXavier/laravel
+    docker build https://github.com/FineJadeXavier/laravel/Dockerfile
