@@ -1,7 +1,7 @@
 #### 通过这个，你可以快速构建一个docker的laravel镜像
 #### 环境是 php 7.2.4 和 nginx ，已将composer源改为国内源
 
-## 你可以这样使用
+## 你可以这样使用它
 
 #### step1 clone代码到本地
     git clone https://github.com/FineJadeXavier/docker-laravel.git
