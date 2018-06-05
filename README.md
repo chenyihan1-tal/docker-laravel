@@ -10,7 +10,7 @@
     cd docker-laravel
 
 #### step3 构建镜像
-    docker build -t xavier/laravel ./Dockerfile
+    docker build -t xavier/laravel .
 
 #### step4 运行镜像
     docker run -d --name your-laravel -p80:80 xavier/laravel
