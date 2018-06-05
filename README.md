@@ -1,40 +1,30 @@
-#### 通过这个，你可以快速构建一个docker的laravel镜像
-#### 环境是 php 7.2.4 和 nginx ，已将composer源改为国内源
 
-## 你可以这样使用它
+## 如何使用？
 
-#### step1 clone代码到本地
-    git clone https://github.com/FineJadeXavier/docker-laravel.git
+#### step1 构建镜像
+    docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
-#### step2 进入laravel目录
-    cd docker-laravel
-
-#### step3 构建镜像
-    docker build -t xavier/laravel .
-
-#### step4 运行镜像
+#### step2 运行一个新的容器
     docker run -d --name your-laravel -p80:80 xavier/laravel
 
-#### step5 进入镜像的终端
+#### step3 进入容器的终端
     docker exec -it your-laravel /bin/bash
 
-#### step6 创建一个新的laravel项目
+#### step4 在容器中创建一个新的laravel项目
     rm -rf /var/www  
     cd /var && laravel new www
 
-#### step7 创建日志目录并给权限
+#### step4 创建日志目录并给权限
     touch /var/www/storage/logs/laravel.log
     chmod -R 777 /var/www/storage
-## 前面的3步你也可以换成这个
-    docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
-## 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")
+### 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")
 
-## 就可以看见全新的laravel了
+### 就可以看见全新的laravel了
 
 [打开查看截图](http://p9ha5311u.bkt.clouddn.com/imagelaravel.png "Laravel")
 
-## Nginx配置文件
+## Nginx配置文件在哪？
     /etc/nginx/sites-enabled/default.conf
 
 #### 运行的时候可能会出现:
