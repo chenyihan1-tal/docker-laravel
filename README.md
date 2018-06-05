@@ -4,7 +4,7 @@
 ## 你可以这样使用
 
 #### step1 clone代码到本地
-    git clone https://github.com/FineJadeXavier/laravel.git
+    git clone https://github.com/FineJadeXavier/docker-laravel.git
 
 #### step2 进入laravel目录
     cd laravel
@@ -22,7 +22,7 @@
     cd /var/ && laravel new www
 
 ## 前面的3步你也可以换成这个
-    docker build -t xavier/larave lhttps://raw.githubusercontent.com/FineJadeXavier/laravel/master/Dockerfile
+    docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
 ## Nginx配置文件
     /etc/nginx/sites-enabled/default.conf
