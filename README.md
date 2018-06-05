@@ -7,7 +7,7 @@
     git clone https://github.com/FineJadeXavier/docker-laravel.git
 
 #### step2 进入laravel目录
-    cd laravel
+    cd docker-laravel
 
 #### step3 构建镜像
     docker build -t xavier/laravel ./Dockerfile
