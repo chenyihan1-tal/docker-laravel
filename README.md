@@ -1,31 +1,25 @@
-# the latest laravel image for docker
+# 这是一个laravel的Dockerfile文件
 
-## 如果你是在中国大陆
+## 你可以这样使用
 
-请运行下面命令
+### clone代码到本地
+    git clone https://github.com/FineJadeXavier/laravel.git
 
-已经将composer,php源替换为国内源
+### 切换到laravel目录
+    cd laravel
 
-    wget https://raw.githubusercontent.com/FineJadeXavier/laravel/master/setup.sh && chmod +x setup.sh && ./setup.sh
+### 构建镜像
+    docker build -t xavier/laravel:latest .
 
-安装完之后项目在哪里？
+### 运行镜像
+    docker run -d --name your-laravel -p80:80 xavier/laravel
 
-/var/www/
+### 进入镜像的终端
+    docker exec -it your-laravel /bin/bash
 
-目前是 php7.2.4 ， laravel5.6 和 nginx
+### 创建一个新的laravel项目
+    cd /var/ && laravel new www
 
-如果有兴趣 ，请帮助我优化代码
 
-## If you're not in China
-
-Run this , please
-
-    wget https://raw.githubusercontent.com/FineJadeXavier/laravel/master/setup_nc.sh && chmod +x ssetup_nc.sh && ./setup_nc.sh
-
-Where is the project after the installation？
-
-/var/www/
-
-it is php7.2.4 , laravel5.6  and nginx for now
-
-If you are interested, help me optimize the code
+## 或者你可以这样使用
+    docker build https://github.com/FineJadeXavier/laravel
