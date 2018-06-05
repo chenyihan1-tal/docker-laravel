@@ -22,7 +22,7 @@
 
 ### 就可以看见全新的laravel了
 
-![Alt text](http://p9ha5311u.bkt.clouddn.com/imageimagelaravel.png)
+![本处应该是截图](http://zhio.qiniu.finejadexavier.cn/imageimagelaravel.png)
 
 ## Nginx配置文件在哪？
     /etc/nginx/sites-enabled/default.conf
