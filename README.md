@@ -1,4 +1,5 @@
-# 这是一个laravel的Dockerfile文件
+#### 通过这个文件，你可以快速构建一个docker的laravel镜像
+#### 环境是 php 7.2.4 和 nginx ，已将composer源改为国内源
 
 ## 你可以这样使用
 
@@ -9,7 +10,7 @@
     cd laravel
 
 ### 构建镜像
-    docker build -t xavier/laravel:latest .
+    docker build -t xavier/laravel:latest ./Dockerfile
 
 ### 运行镜像
     docker run -d --name your-laravel -p80:80 xavier/laravel
@@ -22,4 +23,4 @@
 
 
 ## 或者你可以这样使用
-    docker build https://raw.githubusercontent.com/FineJadeXavier/laravel/master/Dockerfile/Dockerfile
+    docker build https://raw.githubusercontent.com/FineJadeXavier/laravel/master/Dockerfile
