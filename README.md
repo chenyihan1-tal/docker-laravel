@@ -20,7 +20,7 @@
 
 ### 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")
 
-### 就可以看见全新的laravel了
+#### 就可以看见全新的laravel了
 
 ![截图](http://zhio.qiniu.finejadexavier.cn/imageimagelaravel.png)
 
