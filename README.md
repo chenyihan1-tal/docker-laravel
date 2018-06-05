@@ -1,10 +1,6 @@
 #### 通过这个，你可以快速构建一个docker的laravel镜像
 #### 环境是 php 7.2.4 和 nginx ，已将composer源改为国内源
 
-#### **运行的时候可能会出现**
-<font font-color="249, 242, 244"> Do not run Composer as root/super user! See https://getcomposer.org/root for details </font>
-#### 这是一个警告，让我们不要在root用户下使用composer,无视就好
-
 ## 你可以这样使用它
 
 #### step1 clone代码到本地
@@ -32,5 +28,14 @@
 ## 前面的3步你也可以换成这个
     docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
+## 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")
+## 就可以看见你的全新的laravel了
+![图片加载失败](http://p9ha5311u.bkt.clouddn.com/imagelaravel.png)
+
 ## Nginx配置文件
     /etc/nginx/sites-enabled/default.conf
+
+
+#### 运行的时候可能会出现:
+Do not run Composer as root/super user! See https://getcomposer.org/root for details
+#### 这是一个警告，让我们不要在root用户下使用composer,无视就好
