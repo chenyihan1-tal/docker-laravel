@@ -22,8 +22,6 @@
 
 ### 就可以看见全新的laravel了
 
-[打开查看截图](http://p9ha5311u.bkt.clouddn.com/imagelaravel.png "Laravel")
-
 ![Alt text](http://p9ha5311u.bkt.clouddn.com/imagelaravel.png)
 
 ## Nginx配置文件在哪？
