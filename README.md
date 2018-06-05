@@ -30,7 +30,7 @@
 
 ## 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")
 ## 就可以看见你的全新的laravel了
-![图片加载失败](http://p9ha5311u.bkt.clouddn.com/imagelaravel.png)
+![图片加载失败]('http://p9ha5311u.bkt.clouddn.com/imagelaravel.png')
 
 ## Nginx配置文件
     /etc/nginx/sites-enabled/default.conf
