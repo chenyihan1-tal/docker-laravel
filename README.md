@@ -29,8 +29,7 @@
     docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
 ## 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")
-
-## 就可以看见全新的laravel了
+## 就可以看见你的全新的laravel了
 
 [打开查看截图](http://p9ha5311u.bkt.clouddn.com/imagelaravel.png "Laravel")
 
