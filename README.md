@@ -22,13 +22,15 @@
 
 ### 就可以看见全新的laravel了
 
-![Alt text](http://p9ha5311u.bkt.clouddn.com/imagelaravel.png)
+![Alt text](http://p9ha5311u.bkt.clouddn.com/imageimagelaravel.png)
 
 ## Nginx配置文件在哪？
     /etc/nginx/sites-enabled/default.conf
 
 #### 运行的时候可能会出现:
+
 Do not run Composer as root/super user! See https://getcomposer.org/root for details
+
 #### 这是一个警告，让我们不要在root用户下使用composer,无视就好
 
 ## 如何使用MySQL以及redis？
