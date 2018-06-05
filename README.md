@@ -1,6 +1,10 @@
 #### 通过这个，你可以快速构建一个docker的laravel镜像
 #### 环境是 php 7.2.4 和 nginx ，已将composer源改为国内源
 
+#### 运行的时候可能会出现
+<font color="249, 242, 244"> Do not run Composer as root/super user! See https://getcomposer.org/root for details </font>
+#### 这是一个警告，让我们不要再root用户下使用composer,无视就好
+
 ## 你可以这样使用它
 
 #### step1 clone代码到本地
