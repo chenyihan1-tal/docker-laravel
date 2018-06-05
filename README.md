@@ -1,9 +1,9 @@
 #### 通过这个，你可以快速构建一个docker的laravel镜像
 #### 环境是 php 7.2.4 和 nginx ，已将composer源改为国内源
 
-#### 运行的时候可能会出现
-<font color="249, 242, 244"> Do not run Composer as root/super user! See https://getcomposer.org/root for details </font>
-#### 这是一个警告，让我们不要再root用户下使用composer,无视就好
+#### **运行的时候可能会出现**
+<font font-color="249, 242, 244"> Do not run Composer as root/super user! See https://getcomposer.org/root for details </font>
+#### 这是一个警告，让我们不要在root用户下使用composer,无视就好
 
 ## 你可以这样使用它
 
@@ -23,8 +23,12 @@
     docker exec -it your-laravel /bin/bash
 
 #### step6 创建一个新的laravel项目
-    cd /var/ && laravel new www
+    rm -rf /var/www  
+    cd /var && laravel new www
 
+#### step7 创建日志目录并给权限
+    touch /var/www/storage/logs/laravel.log
+    chmod -R 777 /var/www/storage
 ## 前面的3步你也可以换成这个
     docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
