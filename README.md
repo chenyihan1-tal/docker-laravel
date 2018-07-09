@@ -1,20 +1,28 @@
 
 ## 如何使用？
 
-#### step1 构建镜像
+### 你可以直接拉取已构建好的镜像
+
+    docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
+
+### 或者自己手动构建
+
+#### 1. 构建镜像
+
     docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
-#### step2 运行一个新的容器
+#### 2. 运行一个新的容器
+
     docker run -d --name your-laravel -p80:80 xavier/laravel
 
-#### step3 进入容器的终端
+#### 3. 进入容器的终端
     docker exec -it your-laravel /bin/bash
 
-#### step4 在容器中创建一个新的laravel项目
+#### 4. 在容器中创建一个新的laravel项目
     rm -rf /var/www  
     cd /var && laravel new www
 
-#### step4 创建日志目录并给权限
+#### 5. 创建日志目录并给权限
     touch /var/www/storage/logs/laravel.log
     chmod -R 777 /var/www/storage
 
