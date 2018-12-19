@@ -1,38 +1,38 @@
 
-## 如何使用？
+## How to use?
 
-### 你可以直接拉取已构建好的镜像
+### You can `pull` the image
 
     docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
 
-### 或者自己手动构建
+### Or You can build it from scratch
 
-#### 1. 构建镜像
+#### 1. Build the image
 
     docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
-#### 2. 运行一个新的容器
+#### 2. Run new container
 
     docker run -d --name your-laravel -p80:80 xavier/laravel
 
-#### 3. 进入容器的终端
+#### 3. Run the `bash` inside the container
     docker exec -it your-laravel /bin/bash
 
-#### 4. 在容器中创建一个新的laravel项目
+#### 4. Create new `Laravel` project inside the container
     rm -rf /var/www  
     cd /var && laravel new www
 
-#### 5. 创建日志目录并给权限
+#### 5. Create files and associate the appropriate permissions
     touch /var/www/storage/logs/laravel.log
     chmod -R 777 /var/www/storage
 
-### 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")
+### Open localhost[http://localhost/](http://localhost/ "Laravel")
 
-#### 就可以看见全新的laravel了
+#### Enjoy
 
 ![截图](http://zhio.qiniu.finejadexavier.cn/imageimagelaravel.png)
 
-## Nginx配置文件在哪？
+## Nginx Config file
     /etc/nginx/sites-enabled/default.conf
 
 #### 运行的时候可能会出现:
