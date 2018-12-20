@@ -26,7 +26,7 @@
     touch /var/www/storage/logs/laravel.log
     chmod -R 777 /var/www/storage
 
-### Open (localhost)[http://localhost/]
+### Open [localhost](http://localhost/)
 
 #### Enjoy!
 
