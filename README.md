@@ -26,26 +26,23 @@
     touch /var/www/storage/logs/laravel.log
     chmod -R 777 /var/www/storage
 
-### Open localhost[http://localhost/](http://localhost/ "Laravel")
+### Open (http://localhost/)[http://localhost/ "Laravel"]
 
-#### Enjoy
-
-![截图](http://zhio.qiniu.finejadexavier.cn/imageimagelaravel.png)
+#### Enjoy!
 
 ## Nginx Config file
     /etc/nginx/sites-enabled/default.conf
 
-#### 运行的时候可能会出现:
+#### This error may appear:
 
 Do not run Composer as root/super user! See https://getcomposer.org/root for details
 
-#### 这是一个警告，让我们不要在root用户下使用composer,无视就好
 
-## 如何使用MySQL以及redis？
+## How to use MySQL and Redis？
 
-#### 首先你需要一个MySQL(redis)容器，第三步的的时候加上--link=mysql:your-mysql就可以了
+#### First you need a MySQL (redis) container. In the third step, add --link=mysql:your-mysql.
 
     docker run -d --name your-laravel -p80:80 --link=mysql:mysql xavier/laravel
     
-#### redis 同理
+#### And the some with Redis
 
