@@ -28,8 +28,6 @@
 
 ### Open [localhost](http://localhost/)
 
-#### Enjoy!
-
 ## Nginx Config file
     /etc/nginx/sites-enabled/default.conf
 
