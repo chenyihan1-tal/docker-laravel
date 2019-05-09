@@ -23,7 +23,7 @@ docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
 #### <span id="step2Chn">2. 运行一个新的容器</span>
 #### <span id="step2Eng">2. Run new container</span>
 
-    docker run -d --name your-laravel -p80:80 -p443:443 xavier/laravel
+    docker run -d --name your-laravel -p80:80 -p443:443 registry.cn-hangzhou.aliyuncs.com/xavier/laravel
     
 #### 3. 进入容器的终端    
 #### 3. Run the `bash` inside the container
@@ -74,7 +74,7 @@ chmod -R 777 /var/www/storage
 ###### 首先你需要一个MySQL/Rediss容器，在[第2步](#step2Chn)的时候加上--link=mysql:your-mysql
 ###### First you need a MySQL/Redis container. In the [second step](#step2Eng), add --link=mysql:your-mysql.
 
-    docker run -d --name your-laravel -p80:80 -p443:443 --link=mysql:mysql xavier/laravel
+    docker run -d --name your-laravel -p80:80 -p443:443 --link=mysql:mysql registry.cn-hangzhou.aliyuncs.com/xavier/laravel
  
 ###### Redis 同理
 ###### And the some with Redis
