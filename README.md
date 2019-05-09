@@ -16,7 +16,7 @@
 
 #### 1. `Pull` the image
 #### 1. 拉取镜像
-```bsh
+```bash
 docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
 # Not in CHN ? you can: docker push finejadexavier/laravel
 ```
