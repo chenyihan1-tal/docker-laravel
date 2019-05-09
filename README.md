@@ -1,7 +1,7 @@
-# docker-laravel
+# Docker-Laravel
 
 ###### You can build a Laravel's running environment with Docker by it
-###### 通过这个，你可以用Docker快速构建一个Laravel的运行环境
+###### 通过这个，你可以用Docker快速构建一个`Laravel`的运行环境
 
 ## Getting Started
 ## 开始使用
@@ -14,11 +14,8 @@
 ### Installing
 ### 如何安装
 
-#### 1. Build the image
-#### 1. 构建镜像
-
-###### You can `pull` the image
-###### 拉取已构建好的镜像
+#### 1. `Pull` the image
+#### 1. 拉取镜像
 
     docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
 
@@ -33,7 +30,7 @@
     docker exec -it your-laravel /bin/bash
     
 #### 4. Create new `Laravel` project inside the container
-#### 4. 在容器中创建一个新的laravel项目
+#### 4. 在容器中创建一个新的`Laravel`项目
 
     rm -rf /var/www  
     cd /var 
