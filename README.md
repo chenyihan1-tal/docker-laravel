@@ -1,7 +1,6 @@
-# Docker-Laravel
+<h1 align="center">Docker-Laravel</h1>
+<h6 align="center">You can build a Laravel's running environment with Docker by it<br />通过这个，你可以用Docker快速构建一个Laravel的运行环境</h6>
 
-###### You can build a Laravel's running environment with Docker by it
-###### 通过这个，你可以用Docker快速构建一个`Laravel`的运行环境
 
 ## Getting Started
 ## 开始使用
