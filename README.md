@@ -16,8 +16,10 @@
 
 #### 1. `Pull` the image
 #### 1. 拉取镜像
-
-    docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
+```bsh
+docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
+# Not in CHN ? you can: docker push finejadexavier/laravel
+```
 
 #### <span id="step2Eng">2. Run new container</span>
 #### <span id="step2Chn">2. 运行一个新的容器</span>
@@ -31,18 +33,21 @@
     
 #### 4. Create new `Laravel` project inside the container
 #### 4. 在容器中创建一个新的`Laravel`项目
-
-    rm -rf /var/www  
-    cd /var 
-    laravel new www
-    ## 或者安装指定版本： composer create-project --prefer-dist laravel/laravel blog "5.5.*"
-    ## Or install the specified version：  composer create-project --prefer-dist laravel/laravel blog "5.5.*"
+```bash
+rm -rf /var/www  
+cd /var 
+laravel new www
+# 或者安装指定版本： composer create-project --prefer-dist laravel/laravel blog "5.5.*"
+# Or install the specified version：  composer create-project --prefer-dist laravel/laravel blog "5.5.*"
+```
 
 #### 5. Create files and associate the appropriate permissions
 #### 5. 创建日志目录并给权限
-
-    touch /var/www/storage/logs/laravel.log
-    chmod -R 777 /var/www/storage
+```
+touch /var/www/storage/logs/laravel.log
+chmod -R 777 /var/www/storage
+```
+    
     
 #### 6. Open [localhost](http://localhost/)
 #### 6. 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")即可看到运行中的Laravel了
