@@ -18,14 +18,9 @@
 #### 1. 构建镜像
 
 ###### You can `pull` the image
-###### 你可以直接拉取已构建好的镜像
+###### 拉取已构建好的镜像
 
     docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
-
-###### Or You can build it from scratch
-###### 或者自己手动构建
-
-    docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
 #### <span id="step2Eng">2. Run new container</span>
 #### <span id="step2Chn">2. 运行一个新的容器</span>
