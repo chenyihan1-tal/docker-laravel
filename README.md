@@ -1,19 +1,19 @@
 
 ## 如何使用？
 
-### 你可以直接拉取已构建好的镜像
+#### 1. 构建镜像
+
+###### 你可以直接拉取已构建好的镜像
 
     docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
 
-### 或者自己手动构建
-
-#### 1. 构建镜像
+###### 或者自己手动构建
 
     docker build -t xavier/laravel https://raw.githubusercontent.com/FineJadeXavier/docker-laravel/master/Dockerfile
 
 #### 2. 运行一个新的容器
 
-    docker run -d --name your-laravel -p80:80 xavier/laravel
+    docker run -d --name your-laravel -p80:80 -p443:443 xavier/laravel
 
 #### 3. 进入容器的终端
     docker exec -it your-laravel /bin/bash
@@ -28,10 +28,6 @@
 
 ### 打开浏览器访问[http://localhost/](http://localhost/ "Laravel")
 
-#### 就可以看见全新的laravel了
-
-![截图](http://zhio.qiniu.finejadexavier.cn/imageimagelaravel.png)
-
 ## Nginx配置文件在哪？
     /etc/nginx/sites-enabled/default.conf
 
@@ -43,9 +39,9 @@ Do not run Composer as root/super user! See https://getcomposer.org/root for det
 
 ## 如何使用MySQL以及redis？
 
-#### 首先你需要一个MySQL(redis)容器，第三步的的时候加上--link=mysql:your-mysql就可以了
+#### 首先你需要一个MySQL/redis容器，第2步(2. 运行一个新的容器)的的时候加上--link=mysql:your-mysql就可以了
 
-    docker run -d --name your-laravel -p80:80 --link=mysql:mysql xavier/laravel
+    docker run -d --name your-laravel -p80:80 -p443:443 --link=mysql:mysql xavier/laravel
     
-#### redis 同理
+###### redis 同理
 
