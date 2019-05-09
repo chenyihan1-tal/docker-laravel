@@ -1,5 +1,18 @@
-## How to use?
-## 如何使用？
+# docker-laravel
+
+###### You can build a Laravel's running environment with Docker by it
+###### 通过这个，你可以用Docker快速构建一个Laravel的运行环境
+
+## Getting Started
+## 开始使用
+
+### Prerequisites
+### 使用条件
+* a computer with Docker
+* 装有Docker的计算机
+
+### Installing
+### 如何安装
 
 #### 1. Build the image
 #### 1. 构建镜像
@@ -68,4 +81,12 @@
    
 ###### And the some with Redis
 ###### Redis 同理
+
+## Acknowledgments
+## 致谢
+
+* Hat tip to anyone whose code was used
+* 任何使用过这个项目的人
+* Englis Translation translated by [@atefBB](https://github.com/atefBB)
+* 感谢[@atefBB](https://github.com/atefBB)对README进行英文版本的翻译
 
