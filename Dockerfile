@@ -1,6 +1,6 @@
 FROM registry.cn-hangzhou.aliyuncs.com/xavier/nginx-php-fpm
 MAINTAINER Xavier
-RUN apt-get update && apt-get install -y curl vim vi 
+RUN apt-get update && apt-get install -y vi 
 RUN echo "alias laravel='~/.composer/vendor/bin/laravel'" >> ~/.bashrc
 RUN source ~/.bashrc 
 RUN composer global require "laravel/installer"
