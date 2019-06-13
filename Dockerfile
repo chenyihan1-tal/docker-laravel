@@ -1,6 +1,5 @@
 FROM registry.cn-hangzhou.aliyuncs.com/xavier/nginx-php-fpm
 MAINTAINER Xavier
-RUN composer config -g repo.packagist composer https://packagist.phpcomposer.com
 RUN echo "alias laravel='~/.composer/vendor/bin/laravel'" >> ~/.bashrc
 RUN source ~/.bashrc 
 RUN composer global require "laravel/installer"
