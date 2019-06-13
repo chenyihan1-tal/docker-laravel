@@ -32,8 +32,11 @@ docker pull registry.us-west-1.aliyuncs.com/xavier/usa-laravel
 cd /var/www 
 laravel new default
 ```
-或者安装指定版本： composer create-project --prefer-dist laravel/laravel blog "5.5.*"
-Or install the specified version：  composer create-project --prefer-dist laravel/laravel blog "5.5.*"
+或者安装指定版本（Or install the specified version）
+```bash
+cd /var/www 
+composer create-project --prefer-dist laravel/laravel blog "5.5.*"
+```
 
 #### 5. 创建日志目录并给权限（Create files and associate the appropriate permissions）
 ```
