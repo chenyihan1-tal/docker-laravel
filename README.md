@@ -34,9 +34,8 @@ docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
 #### 4. Create new `Laravel` project inside the container
 
 ```bash
-rm -rf /var/www  
-cd /var 
-laravel new www
+cd /var/www 
+laravel new default
 # 或者安装指定版本： composer create-project --prefer-dist laravel/laravel blog "5.5.*"
 # Or install the specified version：  composer create-project --prefer-dist laravel/laravel blog "5.5.*"
 ```
@@ -44,8 +43,8 @@ laravel new www
 #### 5. 创建日志目录并给权限
 #### 5. Create files and associate the appropriate permissions
 ```
-touch /var/www/storage/logs/laravel.log
-chmod -R 777 /var/www/storage
+touch /var/www/default/storage/logs/laravel.log
+chmod -R 777 /var/www/default/storage
 ```
     
     
