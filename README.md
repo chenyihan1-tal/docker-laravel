@@ -17,7 +17,7 @@
 #### 1. `Pull` the image
 ```bash
 docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
-# Not in China ? you can: docker push finejadexavier/laravel
+# Not in China ? you can: docker pull finejadexavier/laravel
 ```
 
 #### <span id="step2Chn">2. 运行一个新的容器</span>
