@@ -1,5 +1,4 @@
-FROM registry.cn-hangzhou.aliyuncs.com/xavier/nginx-php-fpm
-MAINTAINER Xavier
+FROM richarvey/nginx-php-fpm
 RUN echo "alias laravel='~/.composer/vendor/bin/laravel'" >> ~/.bashrc
 RUN source ~/.bashrc 
 RUN composer global require "laravel/installer"
