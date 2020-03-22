@@ -5,65 +5,42 @@
 
 ### 使用条件（Prerequisites）
 
-装有Docker的计算机（a computer with Docker）
+Docker
 
-### 如何安装（Installing）
+### 0. 克隆 (Clone)
 
-#### 1. 拉取镜像（`Pull` the image）
 ```bash
-docker pull registry.cn-hangzhou.aliyuncs.com/xavier/laravel
-```
-Not in China ? You can
-```bash
-docker pull registry.us-west-1.aliyuncs.com/xavier/usa-laravel
+git clone https://github.com/xaviercry/docker-laravel
 ```
 
-#### <span id="step2">2. 运行一个新的容器</span>（Run new container）
+### 1. 构建 (Build）
 
-    docker run -d --name your-laravel -p80:80 -p443:443 registry.cn-hangzhou.aliyuncs.com/xavier/laravel
+```bash
+cd docker-laravel
+docker build -t laravel
+```
+
+### 2. 运行 (Run)
+
+```bash
+docker run -d --name laravel -p8080:80 -p443:443 -v <your-laravel-project>:/var/www/default/  laravel
+```
+
+> 你可以加上`-v <nginx-conf-dir>:/etc/nginx/sites-enabled/`来随时更改nginx配置文件
+> Use `-v <nginx-conf-dir>:/etc/nginx/sites-enabled/` to edit the nginx conf anytime
+
+
+### 3. 其他 (Other)
+
+#### 如果你本地没有Laravel项目 (If you dont't hava a laravel project in your computer)
+
+```bash
+docker exec -it laravel /bin/bash
+cd /var/www/
+laravel new <your-project-name>
+rm -rf default && mv <your-project-name> default
+```
     
-#### 3. 进入容器的终端（Run the `bash` inside the container）
-
-    docker exec -it your-laravel /bin/bash
-    
-#### 4. 在容器中创建一个新的`Laravel`项目（Create new `Laravel` project inside the container）
-
-```bash
-cd /var/www 
-laravel new default
-```
-或者安装指定版本（Or install the specified version）
-```bash
-cd /var/www 
-composer create-project --prefer-dist laravel/laravel blog "5.5.*"
-```
-
-#### 5. 创建日志目录并给权限（Create files and associate the appropriate permissions）
-```
-touch /var/www/default/storage/logs/laravel.log
-chmod -R 777 /var/www/default/storage
-```
-
-#### 6. 打开浏览器访问`http://yoursite/`即可看到运行中的Laravel了（Open `http://yoursite/`）
-
-## 其他问题（Other）
-
-### 1. nginx配置文件在哪？（Nginx Config file）
-
-    /etc/nginx/sites-enabled/default.conf
-    
-### 2. 运行的时候可能会出现（This error may appear）
-    Do not run Composer as root/super user! See https://getcomposer.org/root for details
-
-###### 这是一个警告，无视就好（This is a warning,just ignore it.）
-
-### 3. 如何使用MySQL以及Redis（How to use MySQL and Redis）？
-
-###### 首先你需要一个MySQL/Rediss容器，在[第2步](#step2)的时候加上--link=mysql:your-mysql
-###### First you need a MySQL/Redis container. In the [second step](#step2), add --link=mysql:your-mysql.
-
-    docker run -d --name your-laravel -p80:80 -p443:443 --link=mysql:mysql registry.cn-hangzhou.aliyuncs.com/xavier/laravel
- 
 ## 致谢（Acknowledgments）
 
 * 任何使用过这个项目的人（Hat tip to anyone whose code was used）

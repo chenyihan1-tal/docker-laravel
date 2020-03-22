@@ -1,6 +1,12 @@
 FROM richarvey/nginx-php-fpm
-RUN echo "alias laravel='~/.composer/vendor/bin/laravel'" >> ~/.bashrc
-RUN source ~/.bashrc 
-RUN composer global require "laravel/installer"
-RUN sed -i '5c root /var/www/default/public;' /etc/nginx/sites-enabled/default.conf
-RUN sed -i '25c try_files $uri $uri/ /index.php?$query_string;' /etc/nginx/sites-enabled/default.conf
+
+# install laravel
+RUN composer global require "laravel/installer" \
+    && echo "alias laravel='~/.composer/vendor/bin/laravel'" >> ~/.bashrc \
+    && source ~/.bashrc \
+    && rm -rf /etc/nginx/sites-enabled/*
+
+ADD conf/default.conf /etc/nginx/sites-enabled/
+
+WORKDIR /var/www/default/
+
